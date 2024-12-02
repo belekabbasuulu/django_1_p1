@@ -1,0 +1,12 @@
+{% extends 'notes/base.html' %}
+
+{% block content %}
+    <div class="card">
+        <div class="card-body">
+            <h1>{{ note.title }}</h1>
+            <p class="text-muted">Created: {{ note.created_at }}</p>
+            <p>{{ note.content }}</p>
+            <a href="{% url 'note_edit' pk=note.pk %}" class="btn btn-primary">Edit</a>
+        </div>
+    </div>
+{% endblock %}
